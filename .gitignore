@@ -1,0 +1,17 @@
+# Python bytecode:
+*.pyc
+*.pyo
+
+
+# Packaging files:
+*.egg*
+dist
+
+# Editor temp files:
+*.swp
+*~
+
+# Any unwanted build directories:
+build
+
+.idea
