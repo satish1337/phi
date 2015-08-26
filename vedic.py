@@ -23,3 +23,10 @@ def find_looping_variable(sequence):
         if is_sub_sequence_repeating(sequence, sequence[:idx+1]):
             return idx+1
     return None
+
+def ratios_of_consecutive_two(sequence):
+    ratios = []
+    for idx, itm in enumerate(sequence[1:]):
+        ratio = itm/(sequence[idx]*1.0)
+        ratios.append(ratio)
+    return ratios
