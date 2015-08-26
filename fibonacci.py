@@ -1,11 +1,11 @@
 
 
-def fibo_term(n):
+def fibonacci_term(n):
     if n == 1 or n == 2:
         return 1
     return fibo_term(n-1)+fibo_term(n-2)
 
-def fibo_term_wo_recursion(n):
+def fibonacci_term_wo_recursion(n):
     # find term without recursion
     return golden_logic(n)
 
