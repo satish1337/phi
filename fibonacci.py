@@ -7,13 +7,19 @@ def fibo_term(n):
 
 def fibo_term_wo_recursion(n):
     # find term without recursion
-    if n <= 2:
-        return 1
-    a = 1
-    b = 1
-    term = 0
-    for i in range(3, n+1):
+    return golden_logic(n)
+
+def golden_logic(n, start1=1, start2=1):
+    # naturally starts with fibonacci
+    # n is positive integer
+    if n <= 0:
+        return
+    b = start2-start1
+    a = start1-b
+    for i in range(n):
         term = a+b
         a = b
         b = term
     return term
+
+
