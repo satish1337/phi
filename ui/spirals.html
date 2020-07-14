@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script>
+      window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        var radius = 0;
+        var angle = 0;
+
+        context.lineWidth = 2;
+        context.strokeStyle = "#000000";
+        context.beginPath();
+        context.moveTo(canvas.width / 2, canvas.height / 2);
+
+        for (var n = 0; n < 150; n++) {
+          radius += 0.75;
+          // make a complete circle every 50 iterations
+          angle += (Math.PI * 2) / 50;
+          var x = canvas.width / 2 + radius * Math.cos(angle);
+          var y = canvas.height / 2 + radius * Math.sin(angle);
+          context.lineTo(x, y);
+        }
+
+        context.stroke();
+      };
+    </script>
+  </head>
+
+  <body>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="250"
+      style="border: 1px solid black;"
+    >
+    </canvas>
+  </body>
+</html>
